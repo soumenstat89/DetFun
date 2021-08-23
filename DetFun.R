@@ -13,7 +13,7 @@ library(abind)                     # Import the library for manipulating multidi
 ##################### SimulateDetection_detfun ################
 ###############################################################
 #' @title Function to simulate individual detections within an SCR framework, under the influence of 
-#' different detection functions.
+#' a specified detection function.
 #'
 #' @description
 #' \code{SimulateDetection_detfun} returns a list object with \code{} 
@@ -2131,7 +2131,7 @@ HRA_detfun <- function (detfun, param, pr = 0.95, xlim, ylim,
 #############################################################################
 ##################### SIMULATING POSTERIOR REPLICATES OF THE DATA ###########
 #############################################################################
-#' @title Function to draw posterior replicates of the data for a given MCMC sample of parameters.
+#' @title Function to draw posterior replicates of the SCR data for a given MCMC sample of parameters.
 #'
 #' @description
 #' \code{simulateFromPosterior} returns posterior replicates of the data for a given MCMC sample of parameters.
