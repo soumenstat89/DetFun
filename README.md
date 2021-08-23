@@ -16,7 +16,7 @@ LOADING R LIBRARY PACKAGES
 THIS SCRIPT IS FOR RUNNING THE MODEL BY SOURCING THE R SCRIPT "DetFun.R".
 > source("DetFun.R")
 
-* THE FOLLOWING R FUNCTIONS ARE LOADED BY SOURCING "DetFun.R"
+THE FOLLOWING R FUNCTIONS ARE LOADED BY SOURCING "DetFun.R"
 
 + SimulateDetection_detfun( ): Function to simulate individual detections within an SCR framework, under the influence of a specified detection function.
 + UTMToGrid( ): Function to convert UTM coordinates to GRID coordinates for both habitat and detectors
@@ -50,12 +50,12 @@ THIS SCRIPT IS FOR RUNNING THE MODEL BY SOURCING THE R SCRIPT "DetFun.R".
 )
 
 ##### POSSIBLE CHOICES FOR DETECTION FUNCTIONS 
-detfun.names.sim <- c("HN", "EX", "HNP", "AL", "DN", "BI") # FOR SIMULATIONS  
-detfun.names.fit <- c("HN", "HNP", "EX") # FOR MODEL FITTING  
+> detfun.names.sim <- c("HN", "EX", "HNP", "AL", "DN", "BI") # FOR SIMULATIONS  
+> detfun.names.fit <- c("HN", "HNP", "EX") # FOR MODEL FITTING  
 
 
 ##### RUN THE MCMC AND OBTAIN ESTIMATES 
-runDetFun(
+> runDetFun(
   detfunsim = "AL"            # Detection function used for simulation of SCR data  
   , detfunfit = "EX"          # Detection function used for SCR model fitting  
   , burnin = 1                # MCMC burnin period  
