@@ -1,6 +1,6 @@
 [README.md](https://github.com/soumenstat89/DetFun/files/7032571/README.md)
 
-#  SINGLE-SEASON SCR: VARIOUS DETECTION FUNCTIONS 
+#### SINGLE-SEASON SCR: VARIOUS DETECTION FUNCTIONS 
 
 LOADING R LIBRARY PACKAGES
 
@@ -13,10 +13,10 @@ LOADING R LIBRARY PACKAGES
 > library(abind)                     # Import the library for manipulating multidimensional arrays  
 
 
-THIS SCRIPT IS FOR RUNNING THE MODEL BY SOURCING THE R SCRIPT "DetFun.R".
+##### THIS SCRIPT IS FOR RUNNING THE MODEL BY SOURCING THE R SCRIPT "DetFun.R".
 > source("DetFun.R")
 
-THE FOLLOWING R FUNCTIONS ARE LOADED BY SOURCING "DetFun.R"
+##### THE FOLLOWING R FUNCTIONS ARE LOADED BY SOURCING "DetFun.R"
 
 + SimulateDetection_detfun( ): Function to simulate individual detections within an SCR framework, under the influence of a specified detection function.
 + UTMToGrid( ): Function to convert UTM coordinates to GRID coordinates for both habitat and detectors
