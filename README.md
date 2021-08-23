@@ -4,13 +4,13 @@
 
 LOADING R LIBRARY PACKAGES
 
-> library(rgeos)                     # Import the geospatial analysis libraries
-> library(rgdal)                     # Import the spatial input/ouput libraries
-> library(raster)                    # Import the raster spatial package
-> library(coda)                      # Import the MCMC diagnostic tools
-> library(nimble)                    # Import the NIMBLE subroutines
-> library(nimbleSCR)                 #  Importing custom NIMBLE functions for SCR analysis 
-> library(abind)                     # Import the library for manipulating multidimensional arrays
+> library(rgeos)                     # Import the geospatial analysis libraries  
+> library(rgdal)                     # Import the spatial input/ouput libraries  
+> library(raster)                    # Import the raster spatial package  
+> library(coda)                      # Import the MCMC diagnostic tools  
+> library(nimble)                    # Import the NIMBLE subroutines  
+> library(nimbleSCR)                 #  Importing custom NIMBLE functions for SCR analysis   
+> library(abind)                     # Import the library for manipulating multidimensional arrays  
 
 
 THIS SCRIPT IS FOR RUNNING THE MODEL BY SOURCING THE R SCRIPT "DetFun.R".
@@ -34,39 +34,18 @@ THIS SCRIPT IS FOR RUNNING THE MODEL BY SOURCING THE R SCRIPT "DetFun.R".
 + runDetFun( ): Master function for simulation of SCR data set, run MCMC, compute home range radius and area, Bayesian p-value for the simulated SCR data set with given detection function for simulation and model fitting
 
 > myVars <- list(
-  HABITAT =    list(extent     = c(20), # Extent of habitat in each side
-                    resolution = 1,  # Habitat cell resolution
-                    buffer     = 4.5),    # Buffer width 
-  DETECTORS =  list(resolution = 1),  # Detector resolution     
-  POPULATION = list(N = 200,               # true population size
-                    M = 400),              # size of the augmented population
-  ###### From below, only use the list of parameter values that corresponds to the detection function to be used for simulation
-  #-- Half normal
-  HN = list(p0  = 0.3,
-            sigma = 1.5), 
-  #-- Half normal plateau
-  HNP = list(p0  = 0.25,
-             sigma = 1,
-             wd = 1.5), 
-  #-- Donut
-  DN = list(p0 = 0.25, 
-            sigma = 1, 
-            sigma.b = 1.5,
-            wd = 1.5), 
-  #-- Asymmetric logistic 
-  AL = list(p0 = 0.3, 
-            sigma = 2,
-            slope = 5, 
-            slopecon = 1), 
-  #-- Exponential 
-  EX = list(p0 = 0.3, 
-            sigma = 1.5),
-  #-- Bimodal 
-  BI = list(p0 = 0.25, 
-            sigma = 0.5, 
-            p0.b = 0.15, 
-            sigma.b = 1, 
-            wd = 2) 
+  HABITAT =    list(extent     = c(20), # Extent of habitat in each side  
+                    resolution = 1,  # Habitat cell resolution  
+                    buffer     = 4.5),    # Buffer width   
+  DETECTORS =  list(resolution = 1),  # Detector resolution       
+  POPULATION = list(N = 200,               # true population size  
+                    M = 400),              # size of the augmented population  
+  HN = list(p0  = 0.3, sigma = 1.5), #-- Half normal (only use the list of parameter values that corresponds to the detection function to be used for simulation)  
+  HNP = list(p0  = 0.25, sigma = 1, wd = 1.5), #-- Half normal plateau
+  DN = list(p0 = 0.25, sigma = 1, sigma.b = 1.5, wd = 1.5), #-- Donut
+  AL = list(p0 = 0.3, sigma = 2, slope = 5, slopecon = 1), #-- Asymmetric logistic 
+  EX = list(p0 = 0.3, sigma = 1.5), #-- Exponential 
+  BI = list(p0 = 0.25, sigma = 0.5, p0.b = 0.15, sigma.b = 1, wd = 2) #-- Bimodal 
 )
 
 ##### POSSIBLE CHOICES FOR DETECTION FUNCTIONS 
