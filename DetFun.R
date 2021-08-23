@@ -6,7 +6,7 @@ library(rgdal)                     # Import the spatial input/ouput libraries
 library(raster)                    # Import the raster spatial package
 library(coda)                      # Import the MCMC diagnostic tools
 library(nimble)                    # Import the NIMBLE subroutines
-library(nimbleSCR)
+library(nimbleSCR)                 #  Importing custom NIMBLE functions for SCR analysis 
 library(abind)                     # Import the library for manipulating multidimensional arrays
 
 ###############################################################
@@ -2384,7 +2384,7 @@ runDetFun <- function(
   require(raster)                    # Import the raster spatial package
   require(coda)                      # Import the MCMC diagnostic tools
   require(nimble)                    # Import the NIMBLE subroutines
-  require(nimbleSCR)
+  require(nimbleSCR)                #  Importing custom NIMBLE functions for SCR analysis 
   require(abind)                     # Import the library for manipulating multidimensional arrays
   
   modelName = paste("DetFun_sim", detfunsim,"_fit",detfunfit, sep = "")## [SD] 
